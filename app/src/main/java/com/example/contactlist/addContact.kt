@@ -17,14 +17,11 @@ class addContact : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_contact)
 
-
         calendarView.setOnDateChangeListener { calendarView, y, m, d ->
             var months = m + 1
             var birthday = months.toString() +"/" +  d.toString() +"/" + y.toString()
             txtBirthdayDisplay.text = birthday
         }
-
-
     }
 
 
@@ -38,7 +35,6 @@ class addContact : AppCompatActivity() {
         override fun onPostExecute(result: Unit?) {
             super.onPostExecute(result)
             finish()
-
         }
     }
 

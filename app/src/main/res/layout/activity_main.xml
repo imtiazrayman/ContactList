@@ -8,15 +8,15 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="325dp"
-        android:layout_height="383dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="341dp"
+        android:layout_height="401dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081">
+        app:layout_constraintVertical_bias="0.32">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,21 +25,22 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hello World!" />
+                android:text="Hello World!"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="328dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="335dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
@@ -53,14 +54,15 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Modify"
-            android:onClick="modifyActivity"/>
+            android:onClick="modifyActivity"
+            android:text="Modify" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="match_parent"
+            android:layout_width="102dp"
             android:layout_height="match_parent"
-            android:text="Delete" />
+            android:text="Delete"
+            android:onClick="deleteActivity"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

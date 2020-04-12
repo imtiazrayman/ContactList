@@ -9,10 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".modifyContact" >
-        </activity>
+
         <activity android:name=".deleteContact" />
-        <activity android:name=".Calender" />
+        <activity android:name= ".modifyContact" />
         <activity android:name=".addContact" />
         <activity android:name=".MainActivity" >
             <intent-filter>

@@ -1,5 +1,3 @@
 package com.example.contactlist
 
-data class Contact(var name : String , var phoneNumber : Int, var birthday : String) {
-
-}
+data class Contact(var phoneNumber : Int , var name : String? , var birthday : String?)

@@ -1,6 +1,7 @@
 package com.example.contactlist
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,9 +25,17 @@ class MainActivity : AppCompatActivity() {
         val myDb= DataBaseManager(applicationContext)
         myDb.writableDatabase
         val listToDispay = myDb.selectAll()
+
+
+
         for(i in listToDispay)
         {
-            textView.append("Name : ${i.name}  PhoneNumber: ${i.phoneNumber}   Birthday : ${i.birthday}\n")
+            textView.append("\nName : ${i.name}\n PhoneNumber: ${i.phoneNumber}\n   Birthday : ${i.birthday}\n")
+            /*var rndR = (0..255).random()
+            var rndG = (0..255).random()
+            var rndB = (0..255).random()
+            textView.setBackgroundColor(Color.rgb(rndR,rndG, rndB))*/ // was gonna try to make each contact have a unique color.
+
         }
     }
 
@@ -35,6 +44,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(myIntent)
     }
 
-    fun modifyActivity(view: View) {}
+    fun modifyActivity(view: View) {
+        val myIntent= Intent(this, modifyContact::class.java)
+        startActivity(myIntent)
+    }
+
+    fun deleteActivity(view: View) {
+        val myIntent= Intent(this, deleteContact::class.java)
+        startActivity(myIntent)
+    }
 
 }

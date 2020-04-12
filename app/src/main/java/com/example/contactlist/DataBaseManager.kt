@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 
 
+
 val TABLE_CONTACTS = "Contacts"
 val PHONENUMBER = "Phone_Number"
 val NAME = "Contact_Name"
@@ -61,7 +62,7 @@ class DataBaseManager(context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
     fun modify(contactToInsert: Contact) {
         val db = this.writableDatabase
         val modifyString = "UPDATE $TABLE_CONTACTS " +
-                "SET ${NAME} = '${contactToInsert.birthday}' " +
+                "SET ${NAME} = '${contactToInsert.name}' " +
                 "WHERE ${PHONENUMBER} = ${contactToInsert.phoneNumber}"
         db.execSQL(modifyString)
     }

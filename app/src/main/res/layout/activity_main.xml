@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D7F1F4"
     tools:context=".MainActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="341dp"
-        android:layout_height="401dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="319dp"
+        android:layout_height="456dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:elevation="3dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +27,9 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hello World!"
+                android:fontFamily="@font/kalam_bold"
+                android:text="Looking a bit empty there, try to add some contacts"
+                android:textColor="#000000"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
@@ -40,29 +42,54 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.605"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:backgroundTint="#6EEF8A"
+            android:fontFamily="@font/kalam_bold"
             android:onClick="addContactActivity"
-            android:text="Add a contact" />
+            android:text="Add a contact"
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:backgroundTint="#A6FFC400"
+            android:fontFamily="@font/kalam_bold"
             android:onClick="modifyActivity"
-            android:text="Modify" />
+            android:text="Modify"
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="102dp"
+            android:layout_width="98dp"
             android:layout_height="match_parent"
+            android:backgroundTint="#77FF1744"
+            android:fontFamily="@font/kalam_bold"
+            android:onClick="deleteActivity"
             android:text="Delete"
-            android:onClick="deleteActivity"/>
+            android:textColor="#000000" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kalam_bold"
+        android:text="Your Contact List"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

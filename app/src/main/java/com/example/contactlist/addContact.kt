@@ -35,6 +35,7 @@ class addContact : AppCompatActivity() {
         override fun onPostExecute(result: Unit?) {
             super.onPostExecute(result)
             finish()
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
     }
 
@@ -50,16 +51,12 @@ class addContact : AppCompatActivity() {
             phoneEntry.setHint("MUST PUT IN VALUE")
             return
         }
-
         myAsync().execute(Contact(phoneEntry.text.toString().toInt(), nameEntry.text.toString(), txtBirthdayDisplay.text.toString()))
-    }
-
-    fun goToCalendar(view: View) {
-
     }
 
     fun cancelAdd(view: View) {
         finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
 

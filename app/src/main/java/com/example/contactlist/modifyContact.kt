@@ -28,6 +28,7 @@ class modifyContact : AppCompatActivity() {
         override fun onPostExecute(result: Unit?) {
             super.onPostExecute(result)
             finish()
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
     }
 
@@ -51,6 +52,7 @@ class modifyContact : AppCompatActivity() {
 
     fun cancelModify(view: View) {
         finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
 }

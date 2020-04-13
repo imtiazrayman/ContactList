@@ -4,9 +4,6 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-
-
-
 val TABLE_CONTACTS = "Contacts"
 val PHONENUMBER = "Phone_Number"
 val NAME = "Contact_Name"

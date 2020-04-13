@@ -42,16 +42,19 @@ class MainActivity : AppCompatActivity() {
     fun addContactActivity(view: View) {
         val myIntent= Intent(this, addContact::class.java)
         startActivity(myIntent)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     fun modifyActivity(view: View) {
         val myIntent= Intent(this, modifyContact::class.java)
         startActivity(myIntent)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     fun deleteActivity(view: View) {
         val myIntent= Intent(this, deleteContact::class.java)
         startActivity(myIntent)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
 }

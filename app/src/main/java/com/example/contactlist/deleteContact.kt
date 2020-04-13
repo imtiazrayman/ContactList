@@ -24,13 +24,13 @@ class deleteContact : AppCompatActivity() {
         override fun onPostExecute(result: Unit?) {
             super.onPostExecute(result)
             finish()
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);// slide back to the main activity
         }
     }
 
     fun cancelDelete(view: View) {
         finish()
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right); // slide back to the main activity
     }
 
     fun deleteContact(view: View) {

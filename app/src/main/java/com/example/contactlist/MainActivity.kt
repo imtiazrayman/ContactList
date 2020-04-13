@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         for(i in listToDispay)
         {
             textView.append("\nName : ${i.name}\n PhoneNumber: ${i.phoneNumber}\n   Birthday : ${i.birthday}\n")
+
+
+
             /*var rndR = (0..255).random()
             var rndG = (0..255).random()
             var rndB = (0..255).random()
@@ -42,19 +45,19 @@ class MainActivity : AppCompatActivity() {
     fun addContactActivity(view: View) {
         val myIntent= Intent(this, addContact::class.java)
         startActivity(myIntent)
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); // slide out to next activity animation
     }
 
     fun modifyActivity(view: View) {
         val myIntent= Intent(this, modifyContact::class.java)
         startActivity(myIntent)
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); // slide out to next activity animation
     }
 
     fun deleteActivity(view: View) {
         val myIntent= Intent(this, deleteContact::class.java)
         startActivity(myIntent)
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); // slide out to next activity animation
     }
 
 }
